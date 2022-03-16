@@ -1,0 +1,5 @@
+# Products 
+Products. To see the quantity of a specific product that you have on hand in a given active route, tap Sales in the main side menu then click on Products in the right hand of the bottom menu of that window. A list of products will appear with two pieces of data visibly associated: on hand and price. To ensure that the products you currently have on hand appear first, tap the three dot icon in the top right and check the box that says Show products w/onHand first.
+To add a specific product to a sale, simply tap the icon on the left of the specific product. The icon shows a box and arrow.
+Another way to add product to a sale is to be in Sales tab and click the round blue plus icon in the lower right hand corner, which will bring up the products list. Tap the products you would like to add to the sale and specify amount.
+To ensure that the products you currently have on hand appear first, tap the three dot icon in the top right and check the box that says Show products w/onHand first.
