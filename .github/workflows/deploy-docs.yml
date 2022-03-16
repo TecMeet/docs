@@ -1,0 +1,28 @@
+name: "Deploy Docs"
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: ammaraskar/sphinx-action@8b4f60114d7fd1faeba1a712269168508d4750d2
+      with:
+        docs-folder: "docs/"
+        
+    - name: Commit documentation changes
+      run: |
+        cp -r docs/_build/html/* TecPOS/
+        git fetch --no-tags
+        git config pull.rebase true
+        git config --local user.email "action@tecmeet.com"
+        git config --local user.name "GitHub Action"
+        git checkout gh-pages
+        git add .
+        git commit -m "Update documentation" -a || true
+        # The above command will fail if no changes were present, so we ignore
+        # the return code.
+        git push -v origin gh-pages
